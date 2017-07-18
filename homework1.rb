@@ -39,7 +39,7 @@ begin #可以美化輸出
       elsif computer_input == "P" && user_input == "S"
           puts "you won!"
       else computer_input == "S" && user_input == "S"
-          puts "the game is drawn!"
+          puts "the game is drawn!!"
       end
       end
   end
