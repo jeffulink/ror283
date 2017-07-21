@@ -74,12 +74,12 @@ class RPS
    
     def play_again?
         flag = true
-        puts "would you like to play again？：[y/n]"
-        response = gets.chomp
+        puts "would you like to play again？：[Y/N]"
+        response = gets.chomp.upcase
         case response
-            when "y"
+            when "Y"
                 play
-            when "n"
+            when "N"
                 flag = false
         end
     end
