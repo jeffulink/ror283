@@ -20,8 +20,11 @@ end
 
 class RPS
     def initialize
+        puts "plz show your name : "
+        name = gets.chomp
+        puts "hello #{name}" 
         play
-        puts "Bye! Bye!"
+        puts "Bye! Bye! #{name}"
     end
 
     def play
@@ -33,7 +36,6 @@ class RPS
         end 
     end
 
-
     def get_player_getsture
      user = User.new(@name)
      @user_input = user.get_gesture
@@ -43,35 +45,34 @@ class RPS
 
     def who_won
       if @user_input == "R"
-      if @computer_input == "R" && @user_input == "R"
-          puts "the game is drawn!"
-      elsif @computer_input == "P" && @user_input == "R"
-          puts "you lose!"
-      else @computer_input == "S" && @user_input == "R"
-          puts "you won!"
-      end
-      end
+         if @computer_input == "R" && @user_input == "R"
+              puts "the game is drawn!"
+            elsif @computer_input == "P" && @user_input == "R"
+                puts "you lose!"
+         else @computer_input == "S" && @user_input == "R"
+              puts "you won!"
+          end
+        end
       if @user_input == "P"
-      if @computer_input == "R" && @user_input == "P"
-          puts "you won!"
-      elsif @computer_input == "P" && @user_input == "P"
-          puts "the game is drawn!"
-      else @computer_input == "S" && @user_input == "P"
-          puts "you lose!"
-      end
+        if @computer_input == "R" && @user_input == "P"
+              puts "you won!"
+            elsif @computer_input == "P" && @user_input == "P"
+                puts "the game is drawn!"
+            else @computer_input == "S" && @user_input == "P"
+                 puts "you lose!"
+        end
       end
       if @user_input == "S"
-      if @computer_input == "R" && @user_input == "S"
-          puts "you lose!"
-      elsif @computer_input == "P" && @user_input == "S"
-          puts "you won!"
-      else @computer_input == "S" && @user_input == "S"
-          puts "the game is drawn!!"
-      end
+        if @computer_input == "R" && @user_input == "S"
+              puts "you lose!"
+            elsif @computer_input == "P" && @user_input == "S"
+                  puts "you won!"
+        else @computer_input == "S" && @user_input == "S"
+                puts "the game is drawn!!"
+        end
       end
     end
-    
-   
+      
     def play_again?
         flag = true
         puts "would you like to play again？：[Y/N]"
@@ -84,7 +85,6 @@ class RPS
         end
     end
        
-    
 end
 game = RPS.new
 
